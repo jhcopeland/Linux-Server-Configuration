@@ -22,10 +22,40 @@ A baseline installation of a Linux server was configured and prepared to host my
 - Git installed
 - Catalog Web Application project deployed and operating
 - Key-based SSH authentication is enforced.
+- Firewall (UFW) configured for SSH port 2200, HTTP port 80 and NTP port 123
 
 ### Server Login Instructions
 1. Be sure you have obtained the provided user key from the reviewer notes and placed it in a local file.
 2. Open a terminal console and enter the follwing: ssh grader@54.88.238.141 -p 2200 -i ~/(path to user key)/(user key filename)
+
+### Installation and Configuration of Packages
+- The following server commands were implemented to instlall and configure Python and Flask
+sudo apt-get -qqy install python python-pip
+sudo pip2 install --upgrade pip
+sudo pip2 install flask packaging oauth2client redis passlib flask-httpauth
+sudo pip2 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
+
+- The following server commands were implemented to install and configure Apache and Python mod_wsgi
+sudo apt-get install python-pip apache2 libapache2-mod-wsgi
+sudo apt-get install apache2 apache2-utils libexpat1 ssl-cert python
+sudo apt-get install libapache2-mod-wsgi
+sudo /etc/init.d/apache2 restart
+
+- The following server commands were implemented to install and configure PostgreSQL
+sudo apt-get install postgresql postgresql-contrib
+
+- The following server commands were implemented to install and configure Git
+sudo apt-get update
+sudo apt-get install git-core
+
+- The following server commands were implemented to install and configure the Firewall (UFW)
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+sudo ufw allow ssh
+sudo ufw allow 2200/tcp
+sudo ufw allow http
+sudo ufw allow ntp
+sudo ufw enable
 
 
 ## Catalog Web Application Details
@@ -39,7 +69,7 @@ This is an application that performs the following:
 
 Specifically, this web application involves the use of a python program (application.py) to pull information from a PostgreSQL database for a catalog website.  This REST-ful web application uses the Python framework Flask along with a third-party OAuth authentication implementation to secure the database and various CRUD (create, read, update and delete) operations.  It also uses a third party "virtual" DNS implementation in order to utilize the OAUth authentication.
 
-The 3rd party providers are:
+### The 3rd party providers are:
 - Google OAuth 2.0 - This allows login to the web application
 - xip.io for wildcard DNS - This is utilized to implement Google OAuth by prividing for a simulated DNS name for authorized Javascript Origin and paths for authorized redirect URIs.
 
