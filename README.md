@@ -37,7 +37,11 @@ This is an application that performs the following:
 - Provides a user registration and authentication system.
 - Registered users will have the ability to post, edit and delete their own items.
 
-Specifically, this web application involves the use of a python program (application.py) to pull information from a PostgreSQL database for a catalog website.  This REST-ful web application uses the Python framework Flask along with a third-party OAuth authentication implementation to secure the database and various CRUD (create, read, update and delete) operations.
+Specifically, this web application involves the use of a python program (application.py) to pull information from a PostgreSQL database for a catalog website.  This REST-ful web application uses the Python framework Flask along with a third-party OAuth authentication implementation to secure the database and various CRUD (create, read, update and delete) operations.  It also uses a third party "virtual" DNS implementation in order to utilize the OAUth authentication.
+
+The 3rd party providers are:
+- Google OAuth 2.0 - This allows login to the web application
+- xip.io for wildcard DNS - This is utilized to implement Google OAuth by prividing for a simulated DNS name for authorized Javascript Origin and paths for authorized redirect URIs.
 
 ### Catalog Web Application Instructions
 1. Open your web browser and enter http://54.88.238.141.xip.io into the address bar.
