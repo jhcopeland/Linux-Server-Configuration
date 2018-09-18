@@ -36,10 +36,10 @@ sudo pip2 install flask packaging oauth2client redis passlib flask-httpauth
 sudo pip2 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
 
 - The following server commands were implemented to install and configure Apache and Python mod_wsgi
--- sudo apt-get install python-pip apache2 libapache2-mod-wsgi
-sudo apt-get install apache2 apache2-utils libexpat1 ssl-cert python
-sudo apt-get install libapache2-mod-wsgi
-sudo /etc/init.d/apache2 restart
+  - sudo apt-get install python-pip apache2 libapache2-mod-wsgi
+  - sudo apt-get install apache2 apache2-utils libexpat1 ssl-cert python
+  - sudo apt-get install libapache2-mod-wsgi
+  - sudo /etc/init.d/apache2 restart
 
 - The following server commands were implemented to install and configure PostgreSQL
 sudo apt-get install postgresql postgresql-contrib
