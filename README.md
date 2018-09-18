@@ -30,10 +30,10 @@ A baseline installation of a Linux server was configured and prepared to host my
 
 ### Installation and Configuration of Packages
 - The following server commands were implemented to instlall and configure Python and Flask
-sudo apt-get -qqy install python python-pip
-sudo pip2 install --upgrade pip
-sudo pip2 install flask packaging oauth2client redis passlib flask-httpauth
-sudo pip2 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
+  - sudo apt-get -qqy install python python-pip
+  - sudo pip2 install --upgrade pip
+  - sudo pip2 install flask packaging oauth2client redis passlib flask-httpauth
+  - sudo pip2 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
 
 - The following server commands were implemented to install and configure Apache and Python mod_wsgi
   - sudo apt-get install python-pip apache2 libapache2-mod-wsgi
@@ -42,20 +42,20 @@ sudo pip2 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
   - sudo /etc/init.d/apache2 restart
 
 - The following server commands were implemented to install and configure PostgreSQL
-sudo apt-get install postgresql postgresql-contrib
+  - sudo apt-get install postgresql postgresql-contrib
 
 - The following server commands were implemented to install and configure Git
-sudo apt-get update
-sudo apt-get install git-core
+  - sudo apt-get update
+  - sudo apt-get install git-core
 
 - The following server commands were implemented to install and configure the Firewall (UFW)
-sudo ufw default allow outgoing
-sudo ufw default deny incoming
-sudo ufw allow ssh
-sudo ufw allow 2200/tcp
-sudo ufw allow http
-sudo ufw allow ntp
-sudo ufw enable
+  - sudo ufw default allow outgoing
+  - sudo ufw default deny incoming
+  - sudo ufw allow ssh
+  - sudo ufw allow 2200/tcp
+  - sudo ufw allow http
+  - sudo ufw allow ntp
+  - sudo ufw enable
 
 
 ## Catalog Web Application Details
