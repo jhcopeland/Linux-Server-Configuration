@@ -21,6 +21,7 @@ A baseline installation of a Linux server was configured and prepared to host my
 - PostgreSQL installed and a database user = catalog configured with limited permissions
 - Git installed
 - Catalog Web Application project deployed and operating
+- Key-based SSH authentication is enforced.
 
 ### Server Login Instructions
 1. Be sure you have obtained the provided user key from the reviewer notes and placed it in a local file.
