@@ -29,7 +29,7 @@ A baseline installation of a Linux server was configured and prepared to host my
 2. Open a terminal console and enter the follwing: ssh grader@54.88.238.141 -p 2200 -i ~/(path to user key)/(user key filename)
 
 ### Installation and Configuration of Packages
-- The following server commands were implemented to instlall and configure Python and Flask
+- The following server commands were implemented to install and configure Python and Flask
   - sudo apt-get -qqy install python python-pip
   - sudo pip2 install --upgrade pip
   - sudo pip2 install flask packaging oauth2client redis passlib flask-httpauth
